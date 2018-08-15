@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Task Form</title>
+</head>
+<body>
+
+<a href="/tasklist">See all Tasks</a>
+
+<form action="#" th:action="@{/process}" th:object="${task}" method="post">
+
+    <input type="hidden" th:field="*{id}" />
+
+    UserName :<input type="text" th:field="*{username}" />
+    <span th:if="${#fields.hasErrors('username')}"
+          th:errors="*{username}"></span><br />
+
+    Task :<input type="text" th:field="*{taskitem}" />
+    <span th:if="${#fields.hasErrors('taskitem')}"
+          th:errors="*{taskitem}"></span><br />
+
+    <br />
+
+    <input type="submit" value="Submit" />
+
+</form>
+
+
+</body>
+</html>
