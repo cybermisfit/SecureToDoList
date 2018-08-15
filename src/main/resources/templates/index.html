@@ -2,10 +2,10 @@
 <html lang="en" xmlns:th="www.thymeleaf.org" xmlns:sec="www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8"/>
-    <title>Title</title>
+    <title>ToDoList Index</title>
 </head>
 <body>
-<h2>Index Page</h2>
+<h2>To Do List</h2>
 
 <div sec:authorize="isAuthenticated()">
 
@@ -29,7 +29,7 @@
 <a href="/login">Login</a>
 <a href="/logout">Logout</a>
 <a href="/register">Register</a>
-<a href="/addtask">Add a Task</a>
+<a href="/tasklist">To Do List</a>
 <!--<a href="/secure">Secure Page</a>-->
 
 </body>
